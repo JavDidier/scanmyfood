@@ -1,0 +1,108 @@
+/* GLOBAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* TITLES AND FONTS */
+
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Shrikhand', cursive;
+*/
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 3px solid #cf72da;
+}
+
+    h1 {
+        font-family: 'Shrikhand', cursive;
+        background-color: #7289da;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 25px;
+        margin-bottom: 25px;
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    h2 {
+        color: #000000;
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+
+    h3 {
+        color: #000000;
+        font-size: 13px;
+    }
+
+    /* FORM */
+    .formulaire {
+        margin: 0 auto;
+        text-align: center;
+        margin: 25px;
+    }
+
+    input {
+        padding: 10px 50px;
+        height: 50px;
+        font-size: 15px;
+        border: 2px solid #7289da;
+    }
+
+    button {
+        height: 50px;
+        padding: 10px 25px;
+        background-color: #55d3b0;
+        color: white;
+        border: 2px solid #7289da;
+    }
+
+
+
+.div-resultat {
+    border: 2px solid #7289da;
+    padding: 25px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.resultatTitre {
+    color: #cf72da;
+    text-transform: uppercase;
+}
+
+.resultatCode {
+    color: #cf72da;
+}
+
+
+.en-tete-resultat {
+    display: flex;
+    align-items: center;
+
+}
+
+.resultatImg {
+    border: 1px solid #55d3b0;
+}
+
+
+.description-produit {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
