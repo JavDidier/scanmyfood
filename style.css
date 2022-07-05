@@ -107,12 +107,3 @@ header {
     margin-bottom: 20px;
 }
 
-
-.div-testScan {
-    text-align: center;
-}
-
-.video, .myvideo {
-   min-width: 800px;
-    min-height: 500px;
-}
