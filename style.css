@@ -63,16 +63,16 @@ header {
         padding: 10px 50px;
         height: 50px;
         font-size: 15px;
-        border: 2px solid #55d3b0;
+        border: 2px solid #7289da;
         width: 90%;
     }
 
     button {
         height: 50px;
         padding: 10px 25px;
-        background-color: #55d3b0;
+        background-color: #7289da;
         color: white;
-        border: 2px solid #55d3b0;
+        border: 2px solid #7289da;
         min-width: 400px;
         width: 90%;
         margin-top: 5px;
@@ -175,4 +175,13 @@ header h2 {
 .resultat {
     font-weight: normal;
     text-transform: none;
+}
+
+
+.formulaire button:hover {
+    cursor: pointer;
+    background-color: #cf72da;
+    border: 1px solid #cf72da;
+    transition-duration: 1s;
+    border-radius: 10px;
 }
