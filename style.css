@@ -107,3 +107,7 @@ header {
     margin-bottom: 20px;
 }
 
+canvas {
+    width: 640px;
+    height: 480px;
+}
