@@ -45,11 +45,7 @@ function appel(barCode) {
 }
 
 
-
-
 (function() {
-
-    
 
     var streaming = false,
         video        = document.querySelector('#video'),
@@ -60,24 +56,23 @@ function appel(barCode) {
         width = 320,
         height = 0;
   
-    navigator.getMedia = (navigator.getUserMedia);
+    navigator.getMedia = ( navigator.getUserMedia ||
+                           navigator.webkitGetUserMedia ||
+                           navigator.mozGetUserMedia ||
+                           navigator.msGetUserMedia);
   
     navigator.getMedia(
       {
         video: true,
         audio: false
       },
-
       function(stream) {
-        if (navigator.GetUserMedia) {
-            video.getVideoTracks()[0].stop();
-          video.SrcObject = stream;
+        if (navigator.mozGetUserMedia) {
+          video.mozSrcObject = stream;
         } else {
-            video.getVideoTracks()[0].stop();
           var vendorURL = window.URL || window.webkitURL;
           video.src = vendorURL.createObjectURL(stream);
         }
-       
         video.play();
       },
       function(err) {
