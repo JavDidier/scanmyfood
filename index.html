@@ -11,37 +11,40 @@
     <!-- HEADER -->
         <header>
             <h1>ScanMyFood</h1>
-            <h2>Zoom sur les aliments</h2>
+            <h2>L'autopsie de vos aliments</h2>
         </header>
 
     <!-- MAIN -->
         <main>
             <div class="formulaire">
                 <input type="number" name="barCode" id="monId" placeholder="Entrez le code barre..">
-                <button type="submit" >Validez</button>
+                <button type="submit" >Recherchez...</button>
             </div>
         </main>
 
-        <!-- CAMERA -->
+        <!-- CAMERA
         <div class="section-camera">
             <video id="video" width="640" height="480" autoplay></video>
             <button id="snap">Take photo</button>
             <canvas id="canvas" width="640" height="480"></canvas>
-        </div>
+        </div> -->
        
 
     <!-- FOOTER -->
         <footer>
             <div class="div-resultat">
                 <div class="en-tete-resultat">
-                    <img class="resultatImg" src="">
-                    <div class="en-tete-resultat-description">
-                        <h2>TITRE : <span class="resultatTitre"></span></h2>
-                        <h3> CODE BARRE :  <span class="resultatCode"></span></h3>
+                    <div class="image-div">
+                        <img class="resultatImg" src="">
                     </div>
-                </div>
-                <div class="description-produit">
-                    <p>Description : <span class="resultat"></span></p>
+                    <div class="en-tete-resultat-description">
+                        <h2>TITRE : <br><span class="resultatTitre"></span></h2>
+                        <h3> CODE BARRE : <br><span class="resultatCode"></span></h3>
+                        <p class="description-produit">Description : <br><span class="resultat"></span></p>
+                    </div>
+                    <div class="divScore">
+                        <p>Nutri-Score : <br><span class="score"></span></p>
+                    </div>
                 </div>
             </div>
 
