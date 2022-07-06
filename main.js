@@ -1,8 +1,8 @@
 let recupererbarCode;
 let envoiCodeBarre = document.querySelector('button');
 
-let nombreProduit = 0;
-let nombreMaxProduits = 10;
+let nombreProduit = 1;
+let nombreMaxProduits = 5;
 
 
 envoiCodeBarre.addEventListener('click', function() {
@@ -54,18 +54,20 @@ function appel(barCode) {
 // création de la fonction ajouter produits
 function nouveauProduit() {
     let containerProduit = document.createElement('div');
+    containerProduit.className = "en-tete-resultat";
 
     if(nombreProduit < nombreMaxProduits) {
-        containerProduit.innerHTML = "<div class='en-tete-resultat'> <div class='image-div'> <img class='resultatImg' src=''></div><div class='en-tete-resultat-description'><h2>TITRE : <br><span class='resultatTitre'></span></h2><h3> CODE BARRE : <br><span class='resultatCode'></span></h3> <p class='description-produit'>Description : <br><span class='resultat'></span></p></div><div class='divScore'> <p>Nutri-Score : <br><span class='score'></span></p></div></div>";
+        containerProduit.innerHTML = "<div class='image-div'> <img class='resultatImg' src=''></div><div class='en-tete-resultat-description'><h2>TITRE : <br><span class='resultatTitre'></span></h2><h3> CODE BARRE : <br><span class='resultatCode'></span></h3> <p class='description-produit'>Description : <br><span class='resultat'></span></p></div><div class='divScore'> <p>Nutri-Score : <br><span class='score'></span></p></div>";
         document.querySelector('#div-resultat').prepend(containerProduit);
         nombreProduit++;
     }
 
     else if(nombreProduit == nombreMaxProduits) {
-        document.getElementById("div-resultat").removeChild(9);
-        containerProduit.innerHTML = "<div class='en-tete-resultat'> <div class='image-div'> <img class='resultatImg' src=''></div><div class='en-tete-resultat-description'><h2>TITRE : <br><span class='resultatTitre'></span></h2><h3> CODE BARRE : <br><span class='resultatCode'></span></h3> <p class='description-produit'>Description : <br><span class='resultat'></span></p></div><div class='divScore'> <p>Nutri-Score : <br><span class='score'></span></p></div></div>";
+        let atRemove = document.querySelector("#div-resultat").lastChild;
+        atRemove.remove();
+        containerProduit.innerHTML = "<div class='image-div'> <img class='resultatImg' src=''></div><div class='en-tete-resultat-description'><h2>TITRE : <br><span class='resultatTitre'></span></h2><h3> CODE BARRE : <br><span class='resultatCode'></span></h3> <p class='description-produit'>Description : <br><span class='resultat'></span></p></div><div class='divScore'> <p>Nutri-Score : <br><span class='score'></span></p></div>";
         document.querySelector('#div-resultat').prepend(containerProduit);
-        nombreProduit == 10;
+        nombreProduit == 5;
     }
 
     else {
