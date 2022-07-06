@@ -1,7 +1,6 @@
 let recupererbarCode;
 let envoiCodeBarre = document.querySelector('button');
 
-let idProduit = 0;
 let nombreProduit = 0;
 let nombreMaxProduits = 10;
 
