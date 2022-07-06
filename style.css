@@ -26,7 +26,6 @@ header {
 
     border-bottom: 3px solid #cf72da;
 }
-
     h1 {
         font-family: 'Shrikhand', cursive;
         background-color: #7289da;
@@ -81,40 +80,7 @@ header {
         font-size: 20px;
     }
 
-
-.div-resultat {
-    border: 2px solid #7289da;
-    padding: 25px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.resultatTitre {
-    color: #cf72da;
-    text-transform: uppercase;
-}
-
-.resultatCode {
-    color: #cf72da;
-}
-
-
-.en-tete-resultat {
-    display: flex;
-    align-items: center;
-
-}
-
-
-.description-produit {
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 13px;
-    text-transform: uppercase;
-}
-
-/* .section-camera {
+ /* .section-camera {
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -132,7 +98,7 @@ header {
     width: 640px;
     height: 480px;
     border: 1px solid black;
-} */
+}  */
 
 header h2 {
     background-color: #cf72da;
@@ -144,14 +110,56 @@ header h2 {
     font-size: 20px;
 }
 
+.formulaire button:hover {
+    cursor: pointer;
+    background-color: #cf72da;
+    border: 1px solid #cf72da;
+    transition-duration: 1s;
+    border-radius: 10px;
+}
+
+
+/* DIV PRODUITS */
+#div-resultat {
+    border: 2px solid #7289da;
+    padding: 25px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.en-tete-resultat {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #7289da;
+    margin-bottom: 30px;
+}
+
+.en-tete-resultat-description {
+    flex: 4;
+}
+
 .image-div {
     text-align: center;
     flex: 1;
     margin: 25px
 }
 
-.en-tete-resultat-description {
-    flex: 4;
+.resultatTitre {
+    color: #cf72da;
+    text-transform: uppercase;
+}
+
+.resultatCode {
+    color: #cf72da;
+}
+
+.description-produit {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    text-transform: uppercase;
 }
 
 .divScore {
@@ -175,13 +183,4 @@ header h2 {
 .resultat {
     font-weight: normal;
     text-transform: none;
-}
-
-
-.formulaire button:hover {
-    cursor: pointer;
-    background-color: #cf72da;
-    border: 1px solid #cf72da;
-    transition-duration: 1s;
-    border-radius: 10px;
 }

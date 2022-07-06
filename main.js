@@ -1,11 +1,15 @@
-
- 
 let recupererbarCode;
 let envoiCodeBarre = document.querySelector('button');
+
+let idProduit = 0;
+let nombreProduit = 0;
+let nombreMaxProduits = 10;
+
 
 envoiCodeBarre.addEventListener('click', function() {
     recupererbarCode = document.querySelector('#monId').value;
     appel(recupererbarCode);
+    nouveauProduit();
 });
 
 
@@ -47,21 +51,44 @@ function appel(barCode) {
     }
 }
 
+// création de la fonction ajouter produits
+function nouveauProduit() {
+    let containerProduit = document.createElement('div');
 
-/* FONCTION PHOTO CAMERA */
-let canvas = document.querySelector('#canvas');
-let context = canvas.getContext('2d');
-let video = document.querySelector('#video');
+    if(nombreProduit < nombreMaxProduits) {
+        containerProduit.innerHTML = "<div class='en-tete-resultat'> <div class='image-div'> <img class='resultatImg' src=''></div><div class='en-tete-resultat-description'><h2>TITRE : <br><span class='resultatTitre'></span></h2><h3> CODE BARRE : <br><span class='resultatCode'></span></h3> <p class='description-produit'>Description : <br><span class='resultat'></span></p></div><div class='divScore'> <p>Nutri-Score : <br><span class='score'></span></p></div></div>";
+        document.querySelector('#div-resultat').prepend(containerProduit);
+        nombreProduit++;
+    }
+
+    else if(nombreProduit == nombreMaxProduits) {
+        document.getElementById("div-resultat").removeChild(9);
+        containerProduit.innerHTML = "<div class='en-tete-resultat'> <div class='image-div'> <img class='resultatImg' src=''></div><div class='en-tete-resultat-description'><h2>TITRE : <br><span class='resultatTitre'></span></h2><h3> CODE BARRE : <br><span class='resultatCode'></span></h3> <p class='description-produit'>Description : <br><span class='resultat'></span></p></div><div class='divScore'> <p>Nutri-Score : <br><span class='score'></span></p></div></div>";
+        document.querySelector('#div-resultat').prepend(containerProduit);
+        nombreProduit == 10;
+    }
+
+    else {
+        alert("Une erreur s'est produite, veuillez essayer plus tard !" );
+    }   
+}
 
 
-if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
-        video.srcObject = stream;
-        video.play();
-    });
-};
+// /* FONCTION PHOTO CAMERA */
+// let canvas = document.querySelector('#canvas');
+// let context = canvas.getContext('2d');
+// let video = document.querySelector('#video');
 
-document.getElementById('snap').addEventListener('click', () => {
-    context.drawImage(video, 0, 0, 640, 480);
-});
+
+// if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+//     navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+//         video.srcObject = stream;
+//         video.play();
+//     });
+// };
+
+// document.getElementById('snap').addEventListener('click', () => {
+//     context.drawImage(video, 0, 0, 640, 480);
+// });
+
 
