@@ -6,9 +6,10 @@ let nombreMaxProduits = 10;
 
 
 envoiCodeBarre.addEventListener('click', function() {
-    recupererbarCode = document.querySelector('#monId').value;
-    appel(recupererbarCode);
+    recupererbarCode = document.querySelector('#champBarreCode').value;
     nouveauProduit();
+    appel(recupererbarCode);
+    
 });
 
 
@@ -71,23 +72,4 @@ function nouveauProduit() {
         alert("Une erreur s'est produite, veuillez essayer plus tard !" );
     }   
 }
-
-
-// /* FONCTION PHOTO CAMERA */
-// let canvas = document.querySelector('#canvas');
-// let context = canvas.getContext('2d');
-// let video = document.querySelector('#video');
-
-
-// if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-//     navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
-//         video.srcObject = stream;
-//         video.play();
-//     });
-// };
-
-// document.getElementById('snap').addEventListener('click', () => {
-//     context.drawImage(video, 0, 0, 640, 480);
-// });
-
 
